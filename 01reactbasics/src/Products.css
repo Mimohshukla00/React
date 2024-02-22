@@ -1,0 +1,11 @@
+.wholediv{
+    height: auto;
+    width: 100%;
+    background-color: blue;
+    color: black;
+    font-size: large;
+    font: bold;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid green;
+}
