@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <h1>Project To Change THE value</h1>
+      <h1 cla>Project To Change THE value</h1>
       <h2>Counter value: {counter}</h2>
 
       <button onClick={addValue}>Add value {counter}</button>
