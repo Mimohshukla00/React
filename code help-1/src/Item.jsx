@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Item.css"
 
-function Item() {
+function Item(prop) {
   return (
-    <div className='item'>Item</div>
+    <div className='item'>{prop.name}</div>
   )
 }
 

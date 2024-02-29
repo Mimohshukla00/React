@@ -1,12 +1,17 @@
 import React from "react";
 import "./Itemprice.css";
 
-function Itemprice() {
+function Itemprice(prop) {
+  const date=prop.date
+  const month=prop.month
+  const year=prop.year
+
   return (
     <div className="itemprice">
-      <div> 22 </div>
-      <div> april </div>
-      <div> 2003 </div>
+      <div> {date} </div>
+      {prop.children}
+      <div> {month} </div>
+      <div>{year} </div>
     </div>
   );
 }
