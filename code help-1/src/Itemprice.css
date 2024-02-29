@@ -1,0 +1,8 @@
+.itemprice{
+    background-color: brown;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid rgb(15, 16, 15);
+}
