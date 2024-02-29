@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 // import './App.css'
 import Item from "./Item";
 import Itemprice from "./Itemprice";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   const response = [{
 
     date:20,
