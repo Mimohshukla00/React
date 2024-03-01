@@ -5,7 +5,11 @@ import Item from "./Item";
 import Itemprice from "./Itemprice";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  
+
+
+
+
   const response = [{
 
     date:20,
@@ -24,11 +28,14 @@ function App() {
   }
   ];
 
+  
+
   return (
     <>
       {/* <div>mimohshukla</div> */}
       <Item name="Maggi" ></Item>
       <Itemprice  date={response[0].date} day={response[0].month} month={response[0].year} > hello its mimohshukla</Itemprice>
+      
       <Item name="harpic" ></Item>
       <Itemprice  date={response[1].date} day={response[1].month} month={response[1].year}></Itemprice>
       <Item name="atta" ></Item>
