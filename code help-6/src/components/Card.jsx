@@ -1,8 +1,14 @@
 // import React from 'react'
 
-function Card() {
+function Card(props) {
+  // const course= props.course;
+  console.log(props)
   return (
-    <div>Card</div>
+    <div>
+      <div>
+        <img src={props.course.Image.url} />
+      </div>
+    </div>
   )
 }
 
