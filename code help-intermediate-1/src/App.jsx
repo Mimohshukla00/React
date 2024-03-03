@@ -21,7 +21,11 @@ function App() {
     email : "" ,
   });
   function changeHandle(event) {
+    // console.log(formData);
     setFormData((prevformData) => {
+      // console.log(...prevformData);
+      console.log(event.target.value)
+      
       return {
         ...prevformData,
         [event.target.name]: event.target.value,
