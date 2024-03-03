@@ -18,21 +18,21 @@ function App() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    email : "" ,
-    comment:"",
-    isvisible:true,
+    email: "",
+    comment: "",
+    isvisible: true,
   });
   function changeHandle(event) {
     console.log(formData);
-    const {name,value,Checked,type}=event.target;
+    const { name, value, Checked, type } = event.target;
     setFormData((prevformData) => {
       // console.log(...prevformData);
       // console.log(event.target.value)
-      
+
       return {
         ...prevformData,
         // [event.target.name]: event.target.value,
-        [name]: type === "checkbox" ?Checked : value
+        [name]: type === "checkbox" ? Checked : value,
       };
     });
   }
@@ -69,18 +69,27 @@ function App() {
         />
       </form>
 
+      <br></br>
+      <br></br>
+      <br></br>
+      <textarea
+        placeholder="enter your comments here "
+        onChange={changeHandle}
+        value={formData.comment}
+        name="comment"
+      ></textarea>
 
       <br></br>
       <br></br>
       <br></br>
-      <textarea placeholder="enter your comments here " onChange={changeHandle} value={formData.comment} name="comment"></textarea>
-
-      <br></br>
-      <br></br>
-      <br></br>
-      <input  id="isvisible"  onClick={changeHandle} type="checkbox" name="isvisible" checked={formData.isvisible}></input>
+      <input
+        id="isvisible"
+        onClick={changeHandle}
+        type="checkbox"
+        name="isvisible"
+        checked={formData.isvisible}
+      ></input>
       <label htmlFor="isvisible">Am i visible</label>
-      
     </div>
   );
 }
