@@ -6,16 +6,12 @@ function App() {
     firstName: "",
     lastName: "",
     email: "",
-    country: ""
+    country: "",
   });
   // console.log(formdata.firstName)
   function handleClick(event) {
-    // console.log(event);
-    setFormData((prevdata) => {
-      console.log(formdata.country)
-      // console.log(prevdata);
-      return { ...prevdata, [event.target.name]: event.target.value };
-    });
+    const { name, value, checked, type } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   }
   return (
     <div>
@@ -60,12 +56,23 @@ function App() {
           value={formdata.country}
           onChange={handleClick}
         >
-          <option 
-          value="formdata.India">India</option>
-          <option value={formdata.Nepal}>Nepal</option>
-          <option value={formdata.Australia}>Australia</option>
-          <option value={formdata.Japan}>Japan</option>
+          <option>India</option>
+          <option>Nepal</option>
+          <option>Australia</option>
+          <option>Japan</option>
         </select>
+
+        <br></br>
+        <label htmlFor="email">Email</label>
+        <br></br>
+        <input
+          id="street"
+          type="text"
+          placeholder="1234 Main building"
+          name="email"
+          onChange={handleClick}
+        ></input>
+        <br></br>
       </form>
     </div>
   );
