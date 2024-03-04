@@ -11,15 +11,19 @@ function App() {
     city: "",
     state: "",
     zipCode: "",
-    comments:false,
-    candidates:false,
-    offers:fals
+    comments: false,
+    candidates: false,
+    offers: false,
   });
   // console.log(formdata.firstName)
   function handleClick(event) {
+    console.log(formdata.comments);
     console.log(formdata);
     const { name, value, checked, type } = event.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   }
   return (
     <div>
@@ -120,11 +124,17 @@ function App() {
         <fieldset>
           <legend>BY Email</legend>
           <input
-          id="comments"
-          name="comments"
-          type="checkbox"
-          value={formdata.comments}
+            id="comments"
+            name="comments"
+            type="checkbox"
+            checked={formdata.comments}
+            onChange={handleClick}
           ></input>
+          <div>
+            <label htmlFor="comments">Comments?</label>
+
+            <p>Get notified when someones posts a comments on a posting</p>
+          </div>
         </fieldset>
       </form>
     </div>
