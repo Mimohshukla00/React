@@ -11,6 +11,9 @@ function App() {
     city: "",
     state: "",
     zipCode: "",
+    comments:false,
+    candidates:false,
+    offers:fals
   });
   // console.log(formdata.firstName)
   function handleClick(event) {
@@ -114,6 +117,15 @@ function App() {
           value={formdata.zipCode}
         ></input>
         <br></br>
+        <fieldset>
+          <legend>BY Email</legend>
+          <input
+          id="comments"
+          name="comments"
+          type="checkbox"
+          value={formdata.comments}
+          ></input>
+        </fieldset>
       </form>
     </div>
   );
