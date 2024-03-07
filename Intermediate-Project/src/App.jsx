@@ -1,31 +1,35 @@
-// import { useState } from 'react'
-import { Route, Router } from "react-router-dom"
-import Navbar from "./Components/Navbar"
-// import Home from "../../02 - React Intermediate/react-router/router-project-studyNotation/src/Components/Home"
-import Home from "./Pages/Home"
-import Login from "./Pages/Login"
-import Signup from "./Pages/Signup"
-import Dashboard from "./Pages/Dashboard"
+// import "./App.css";
+import Navbar from "./Components/Navbar.jsx";
+import Login from "./Components/Login.jsx";
+import Home from "./Components/Home.jsx";
+import Signup from "./Components/Signup.jsx";
+import Dashboard from "./Components/Dashboard.jsx";
+// import PrivateRoute from "./Components/PrivateRoute";
+import { Route, Routes } from "react-router-dom";
+import  { useState } from "react";
 
 function App() {
-  // const [count, setCount] = useState(0)
-
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <>
-    <div>
-      <Navbar></Navbar>
-
-      <Router>
-        <Route path="/" element={<Home></Home>} ></Route>
-        <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/signup" element={<Signup></Signup>}></Route>
-        <Route path="Dashboard" element={<Dashboard></Dashboard>}></Route>
-      </Router>
+    <div className="w-screen h-screen bg-richblack-900 flex flex-col ">
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/login"
+          element={<Login setIsLoggedIn={setIsLoggedIn} />}
+        />
+        <Route
+          path="/signup"
+          element={<Signup setIsLoggedIn={setIsLoggedIn} />}
+        />
+        {/* <PrivateRoute isLoggedIn={isLoggedIn}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </PrivateRoute> */}
+        <Route path="/dashboard" element={<Dashboard></Dashboard>}/>
+      </Routes>
     </div>
-
-   
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
