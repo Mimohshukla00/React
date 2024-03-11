@@ -12,9 +12,25 @@ function App() {
   
   }
   // Variation1 - Every Render 
+  // useEffect(() => {
+  //   console.log("UI Renderer changed")
+  // });
+  // useEffect(() => {
+  //   console.log("UI Renderer changed")
+  // },[]);
+    
+  // useEffect(() => {
+  //   console.log("UI Renderer changed")
+  // },[mi]);
+
+
   useEffect(() => {
-    console.log("UI Renderer changed")
-  });
+    console.log("Added");
+    return () => {
+      console.log("Removed");
+      // console.log(e)
+    }
+  }, [mi]);
     
   
 
