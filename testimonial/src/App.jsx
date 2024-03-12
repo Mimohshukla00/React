@@ -1,8 +1,6 @@
-// import React from "react";
-// import Testimonial from "./Components/Testimonial.jsx";
-import Testimonial from "./components/Testimonial";
+import React from "react";
+import Testimonial from "./Components/Testimonial.jsx";
 import reviews from "./data";
-// import Card from "./components/Card";
 
 const App = () => {
   return (
