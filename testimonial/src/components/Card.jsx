@@ -1,9 +1,10 @@
-// import React from 'react'
-import {FaQuoteRight,FaQuoteLeft } from  "react-icons/fa"
-function Card(review) {
-    console.log(review)
-  return (
-    <div className="flex flex-col md:relative">
+// import React from "react";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+
+const Card = (props) => {
+    let review = props.review;
+    return (
+        <div className="flex flex-col md:relative">
             <div className="absolute top-[-7rem] z-10 mx-auto ">
                 <img src={review.image} alt="" className="aspect-square rounded-full w-[140px] h-[140px] z-25" />
                 <div className="w-[140px] h-[140px] bg-violet-500 rounded-full absolute top-[-6px] z-[-10] left-[10px]"></div>
@@ -29,8 +30,7 @@ function Card(review) {
 
       
         </div>
+    );
+};
 
-  )
-}
-
-export default Card
+export default Card;
