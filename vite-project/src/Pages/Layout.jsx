@@ -2,8 +2,10 @@
 
 function Layout() {
   return (
-    <div>bitch</div>
-  )
+    <div>
+      <div>This is Layout page</div>
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;
