@@ -1,53 +1,76 @@
 // import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Layout from "./Pages/Layout";
-import Home from "./Pages/Home";
-import Blogs from "./Pages/Blogs";
-import Contact from "./Pages/Contact";
+// import { Routes, Route } from "react-router-dom";
+// import Layout from "./Pages/Layout";
+// import Home from "./Pages/Home";
+// import Blogs from "./Pages/Blogs";
+// import Contact from "./Pages/Contact";
+// // import NoPage from "./Pages/NoPage";
+// import { NavLink } from "react-router-dom";
 // import NoPage from "./Pages/NoPage";
-import { NavLink } from "react-router-dom";
+
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Outlet,
+} from "react-router-dom";
 
 function App() {
   return (
+
+
+
+
+
+
+
     <div>
+      <h2>Parent Component</h2>
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <Link to="child1">Child 1</Link>
           </li>
           <li>
-            <NavLink to="/support">Support</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
-          <li>
-            <NavLink to="/labs">Labs</NavLink>
-          </li>
-          <li>
-            <NavLink to="*">No page Found</NavLink>
-          </li>
-          <li>
-            <NavLink to="contact">Contact</NavLink>
+            <Link to="child2">Child 2</Link>
           </li>
         </ul>
       </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/support" element={<Layout />} />
-        <Route path="/about" element={<Layout />} />
-        {/* <Route path="/labs" element={<NoPage />} /> */}
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/Blogs" element={<Blogs />}>
-          {/* Default Route 
-      {/* <Route index element={<Home />} />
-      <Route path="/support" element={<Support />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/labs" element={<Labs />} />
-      <Route path="*" element={<NotFound />} /> */}
-        </Route>
-      </Routes>
+      {/* Outlet is a placeholder for child routes */}
+      <Outlet />
     </div>
+
+    
+    // <div>
+    //   <nav>
+    //     <ul>
+    //       <li>
+    //         <NavLink to="/">Home</NavLink>
+    //       </li>
+    //       <li>
+    //         <NavLink to="/Contact">Contact</NavLink>
+    //       </li>
+    //       <li>
+    //         <NavLink to="/Layout">Layout</NavLink>
+    //       </li>
+    //       <li>
+    //         <NavLink to="/Blogs">Blogs</NavLink>
+    //       </li>
+    //       <li>
+    //         <NavLink to="/Nopage">No page Found</NavLink>
+    //       </li>
+    //     </ul>
+    //   </nav>
+    //   <Routes>
+    //     <Route index element={<Home />} />
+    //     <Route path="/Contact" element={<Contact />} />
+    //     <Route path="/Layout" element={<Layout />} />
+    //     <Route path="/Blogs" element={<Blogs />} />
+    //     <Route path="/Nopage" element={<NoPage />} />
+    //   </Routes>
+    // </div>
   );
 }
 
