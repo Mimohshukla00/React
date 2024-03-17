@@ -1,8 +1,15 @@
-import React from 'react'
+// import React from 'react'
+// import Header from "./Components/Header"
+// import Blogs from "./Components/Blogs"
+// import Pagination from "./Components/Pagination"
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      {/* <Header></Header>
+      <Blogs></Blogs>
+      <Pagination></Pagination> */}
+    </div>
   )
 }
 
